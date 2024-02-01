@@ -2,4 +2,4 @@
 
 
 // Configure the global tapping term (default: 200ms)
-#define TAPPING_TERM 150
+//#define TAPPING_TERM 150
