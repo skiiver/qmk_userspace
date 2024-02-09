@@ -93,10 +93,8 @@ enum layer_names {
 #define WINCAD   C(A(KC_DEL))  // Control Alt Delete for Win Logins
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-
 /* Qwerty*/
-[_QWERTY] = LAYOUT_ortho_5x12(
-CAGGRV,  PR_1,    PR_2,    PR_3,    PR_4,  PR_5,   PR_6,   PR_7,  PR_8,    PR_9,    PR_0,    CAGDEL,
+[_QWERTY] = LAYOUT_ortho_4x12(
 HYPTAB,  KC_Q,    KC_W,    KC_E,    KC_R,  KC_T,   KC_Y,   KC_U,  KC_I,    KC_O,    KC_P,    HYPBSP,
 MEHESC,  KC_A,    KC_S,    KC_D,    KC_F,  KC_G,   KC_H,   KC_J,  KC_K,    KC_L,    KC_SCLN, KC_QUOT,
 KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,  KC_B,   KC_N,   KC_M,  KC_COMM, KC_DOT,  KC_SLSH, RS_ENT,
@@ -104,8 +102,7 @@ LFN,     KC_LCTL, KC_LALT, KC_LGUI, LOWER, LOWER,  RAISE,  RAISE, KC_LEFT, KC_DO
 ),
 
 /* Lower */
-[_LOWER] = LAYOUT_ortho_5x12(
-_______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,     KC_F10,   _______,
+[_LOWER] = LAYOUT_ortho_4x12(
 _______, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN,   KC_RPRN,  _______,
 _______, ES_EXC,  KC_NUBS, ES_QUE,  EU_EURO, KC_NDSH, KC_MDSH, KC_UNDS, KC_PLUS, KC_LBRC,   KC_RBRC,  KC_PIPE,
 KC_ENT,  UNI_BANG,SC_DEG,  KC_APPL, EU_GBP,  L_GUIL,  R_GUIL,  KC_MINS, KC_EQL,  G(KC_DOWN),G(KC_UP), _______,
@@ -113,8 +110,7 @@ _______, _______, _______, _______, _______, _______, _______, _______, OUTDENT,
 ),
 
 /* Raise */
-[_RAISE] = LAYOUT_ortho_5x12(
-_______, KC_F11,  KC_F12,  KC_F13,  KC_F14,  KC_F15,  KC_F16,  KC_F17,  KC_F18,  KC_F19,  KC_GRV, _______,
+[_RAISE] = LAYOUT_ortho_4x12(
 _______, KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_DEL,
 _______, _______, _______, _______, _______, _______, _______, KC_MINS, KC_EQL,  KC_LBRC, KC_RBRC, KC_BSLS,
 _______, _______, _______, _______, _______, _______, _______, _______, KC_NUBS, KC_LCBR, KC_RCBR, _______,
@@ -122,8 +118,7 @@ _______, _______, _______, _______, _______, _______, _______, _______, PREVTB, 
 ),
 
 /* FUNCTIONs */
-[_LFN] = LAYOUT_ortho_5x12(       
-_______,       _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
+[_LFN] = LAYOUT_ortho_4x12(       
 G(KC_TILD),    KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  WINCAD,
 G(S(KC_TILD)), KC_F11,  KC_F12,  KC_F13,  KC_F14,  KC_F15,  KC_F16,  KC_F17,  KC_F18,  KC_F19,  _______, _______,
 KC_ENT,        _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
@@ -131,11 +126,10 @@ _______,       _______, _______, _______, _______, _______, _______, _______, KC
 ),
 
 /* Adjust */
-[_ADJUST] = LAYOUT_ortho_5x12(
+[_ADJUST] = LAYOUT_ortho_4x12(
 RGB_TOG, RGB_MOD, RGB_HUI, RGB_SAI, RGB_VAI, _______, _______, _______, _______, _______, _______, _______,
 KC_SLEP, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
 _______, _______, _______, _______, _______, _______, _______, _______, ___x___, _______, _______, _______,
-_______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
 _______, _______, _______, _______, _______, _______, _______, _______, _______, KC_BRID, KC_BRIU, _______
 )
 };

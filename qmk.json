@@ -3,6 +3,7 @@
     "build_targets": [
         ["planck/rev6_drop", "skiiver"],
         ["preonic/rev3_drop", "skiiver"],
-        ["keebio/nyquist/rev4", "skiiver"]
+        ["keebio/nyquist/rev4", "skiiver"],
+        ["keebio/nyquist/rev4", "skiiver4x12"]
     ]
 }

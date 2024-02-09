@@ -48,11 +48,11 @@
 //#define MIDI_TONE_KEYCODE_OCTAVES 2
 
 //Tapping Config for Home Row Mods, MT (and some LT)
-// Configure the global tapping term (default: 200ms)
-#define TAPPING_TERM 200
+// Configure the global tapping term 
+#define TAPPING_TERM 200 //default: 200 
 
 // Prevent normal rollover on alphas from accidentally triggering mods...until tapping term / hold threshold met
-#define IGNORE_MOD_TAP_INTERRUPT
+// #define IGNORE_MOD_TAP_INTERRUPT // deprecated 
 
 // Enable rapid switch from tap to hold, disables double tap hold auto-repeat.
-#define TAPPING_FORCE_HOLD
+// #define TAPPING_FORCE_HOLD
