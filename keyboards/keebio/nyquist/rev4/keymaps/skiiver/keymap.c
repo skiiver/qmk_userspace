@@ -61,7 +61,9 @@ enum layer_names {
 #define EU_GBP  A(KC_3)      // GBP currency
 #define SC_DEG  LSA(KC_8)      // degrees
 #define KC_APPL  LSA(KC_K)      // Apple symbol
-#define UNI_BANG HYPR(KC_F11)      // Unicode Interrobang shortcut needs 
+#define KM_BANG HYPR(KC_F11)      // KM Hotkey; otherwise Interrobang needs Unicode support on-keyboard
+#define KC_INF  A(KC_5)      // Infinity
+#define KC_SEC  A(KC_6)      // German Section marker
 
 // Mod Taps                            
 // -------------------          
@@ -71,8 +73,8 @@ enum layer_names {
 #define HYPBSP  HYPR_T(KC_BSPC)
 //Meh (Left Control, Shift, and Alt) plus... 
 #define MEHESC  MEH_T(KC_ESC)  
-#define CAGGRV  LCAG_T(KC_GRV)
-#define CAGDEL  LCAG_T(KC_DEL)
+#define CAGGRV  LCAG_T(KC_GRV) 
+#define CAGDEL  LCAG_T(KC_DEL)  
 #define RS_ENT  LSFT_T(KC_ENT)  
 //#define LS_ENT  LSFT_T(KC_ENT)  
 #define LS_ENT  MT(MOD_LSFT, KC_ENT) 
@@ -89,7 +91,8 @@ enum layer_names {
 #define PR_9 LCA_T(KC_9)
 #define PR_0 MT(MOD_LGUI | MOD_LCTL, KC_0)
 
-// Special Use Combos 
+
+// Special Combos 
 #define WINCAD   C(A(KC_DEL))  // Control Alt Delete for Win Logins
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -105,17 +108,17 @@ LFN,     KC_LCTL, KC_LALT, KC_LGUI, LOWER, LOWER,  RAISE,  RAISE, KC_LEFT, KC_DO
 
 /* Lower */
 [_LOWER] = LAYOUT_ortho_5x12(
-_______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,     KC_F10,   _______,
-_______, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN,   KC_RPRN,  _______,
-_______, ES_EXC,  KC_NUBS, ES_QUE,  EU_EURO, KC_NDSH, KC_MDSH, KC_UNDS, KC_PLUS, KC_LBRC,   KC_RBRC,  KC_PIPE,
-KC_ENT,  UNI_BANG,SC_DEG,  KC_APPL, EU_GBP,  L_GUIL,  R_GUIL,  KC_MINS, KC_EQL,  G(KC_DOWN),G(KC_UP), _______,
+_______, ES_EXC,  ES_QUE,  EU_GBP,  EU_EURO, KC_INF,  KC_SEC,  KM_BANG, SC_DEG,  L_GUIL,    R_GUIL,   _______,
+KC_TILD, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN,   KC_RPRN,  _______,
+_______, _______, _______, _______, _______, KC_NDSH, KC_MDSH, KC_UNDS, KC_PLUS, KC_LBRC,   KC_RBRC,  KC_PIPE,
+KC_ENT,  _______, _______, _______, _______, L_GUIL,  R_GUIL,  KC_MINS, KC_EQL,  KC_LCBR,   KC_RCBR, _______,
 _______, _______, _______, _______, _______, _______, _______, _______, OUTDENT, KC_PGDN,   KC_PGUP,  INDENT
 ),
 
 /* Raise */
 [_RAISE] = LAYOUT_ortho_5x12(
 _______, KC_F11,  KC_F12,  KC_F13,  KC_F14,  KC_F15,  KC_F16,  KC_F17,  KC_F18,  KC_F19,  KC_GRV, _______,
-_______, KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_DEL,
+KC_GRV,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_DEL,
 _______, _______, _______, _______, _______, _______, _______, KC_MINS, KC_EQL,  KC_LBRC, KC_RBRC, KC_BSLS,
 _______, _______, _______, _______, _______, _______, _______, _______, KC_NUBS, KC_LCBR, KC_RCBR, _______,
 _______, _______, _______, _______, _______, _______, _______, _______, PREVTB,  WBAK,    WFWD,    NEXTTB
