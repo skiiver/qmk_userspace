@@ -61,7 +61,7 @@ enum layer_names {
 #define EU_GBP  A(KC_3)      // GBP currency
 #define SC_DEG  LSA(KC_8)      // degrees
 #define KC_APPL  LSA(KC_K)      // Apple symbol
-#define KM_BANG HYPR(KC_F11)      // KM Hotkey; otherwise Interrobang needs Unicode support on-keyboard
+#define KM_BANG HYPR(KC_F11)      // KM Hotkey; otherwise Interrobang needs Unasicode support on-keyboard
 #define KC_INF  A(KC_5)      // Infinity
 #define KC_SEC  A(KC_6)      // German Section marker
 
@@ -108,19 +108,19 @@ LFN,     KC_LCTL, KC_LALT, KC_LGUI, LOWER, LOWER,  RAISE,  RAISE, KC_LEFT, KC_DO
 
 /* Lower */
 [_LOWER] = LAYOUT_ortho_5x12(
-_______, ES_EXC,  ES_QUE,  EU_GBP,  EU_EURO, KC_INF,  KC_SEC,  KM_BANG, SC_DEG,  L_GUIL,    R_GUIL,   _______,
-KC_TILD, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN,   KC_RPRN,  _______,
-_______, _______, _______, _______, _______, KC_NDSH, KC_MDSH, KC_UNDS, KC_PLUS, KC_LBRC,   KC_RBRC,  KC_PIPE,
-KC_ENT,  _______, _______, _______, _______, L_GUIL,  R_GUIL,  KC_MINS, KC_EQL,  KC_LCBR,   KC_RCBR, _______,
-_______, _______, _______, _______, _______, _______, _______, _______, OUTDENT, KC_PGDN,   KC_PGUP,  INDENT
+KC_BSPC, ES_EXC,    ES_QUE,     EU_GBP,     EU_EURO,    KC_INF,     KC_SEC,  KM_BANG, SC_DEG,  L_GUIL,    R_GUIL,  _______,
+KC_TILD, KC_EXLM,   KC_AT,      KC_HASH,    KC_DLR,     KC_PERC,    KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN,   KC_RPRN, _______,
+KC_TAB,  PREVTB,    WBAK,       WFWD,       NEXTTB,     KC_NDSH,    KC_MDSH, KC_UNDS, KC_PLUS, KC_LBRC,   KC_RBRC, KC_PIPE,
+KC_ENT,  HYPR(KC_Z),HYPR(KC_X), HYPR(KC_C), HYPR(KC_V), HYPR(KC_B), _______, KC_MINS, KC_EQL,  KC_LCBR,   KC_RCBR, _______,
+_______, _______,   _______,    _______,    _______,    _______,    _______, _______, OUTDENT, KC_PGDN,   KC_PGUP, INDENT
 ),
 
 /* Raise */
 [_RAISE] = LAYOUT_ortho_5x12(
-_______, KC_F11,  KC_F12,  KC_F13,  KC_F14,  KC_F15,  KC_F16,  KC_F17,  KC_F18,  KC_F19,  KC_GRV, _______,
+KC_BSPC, KC_F11,  KC_F12,  KC_F13,  KC_F14,  KC_F15,  KC_F16,  KC_F17,  KC_F18,  KC_F19,  KC_GRV, _______,
 KC_GRV,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_DEL,
-_______, _______, _______, _______, _______, _______, _______, KC_MINS, KC_EQL,  KC_LBRC, KC_RBRC, KC_BSLS,
-_______, _______, _______, _______, _______, _______, _______, _______, KC_NUBS, KC_LCBR, KC_RCBR, _______,
+KC_TAB,  _______, _______, _______, _______, _______, _______, KC_MINS, KC_EQL,  KC_LBRC, KC_RBRC, KC_BSLS,
+KC_ENT,  _______, _______, _______, _______, _______, _______, _______, KC_NUBS, KC_LCBR, KC_RCBR, _______,
 _______, _______, _______, _______, _______, _______, _______, _______, PREVTB,  WBAK,    WFWD,    NEXTTB
 ),
 
