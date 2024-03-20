@@ -30,12 +30,6 @@ enum layer_names {
 #define KC_MDSH S(LALT(KC_MINS))
 #define INDENT LGUI(KC_RBRC)    
 #define OUTDENT LGUI(KC_LBRC)
-#define SWAPUP G(C(KC_UP))
-#define SWAPDN G(C(KC_DOWN))
-#define COPYUP A(S(KC_UP))
-#define COPYDN S(G(KC_D))
-#define CURSUP C(S(KC_UP))
-#define CURSDN C(S(KC_DOWN))
 #define CMMTL G(KC_SLSH) // Toggle Line comment
 #define CMMTB A(G(KC_SLSH)) // Toggle Block comment
 
@@ -45,10 +39,6 @@ enum layer_names {
 #define WFWD G(KC_RBRC) 
 #define WBAK G(KC_LBRC)
 
-// screen capture
-//#define KC_CAPW // Capture the whole screen
-//#define KC_CAPA //Capture active window
-//#define KC_CAPP // Capture portion of the screen (The mouse cursor selection box)
 
 // Special Chars for Symbol Layer : These depend on MacOS
 // TODO: add unicode support.
@@ -108,38 +98,38 @@ LFN,     KC_LCTL, KC_LALT, KC_LGUI, LOWER, LOWER,  RAISE,  RAISE, KC_LEFT, KC_DO
 
 /* Lower */
 [_LOWER] = LAYOUT_ortho_5x12(
-KC_BSPC, ES_EXC,    ES_QUE,     EU_GBP,     EU_EURO,    KC_INF,     KC_SEC,  KM_BANG, SC_DEG,  L_GUIL,    R_GUIL,  _______,
-KC_TILD, KC_EXLM,   KC_AT,      KC_HASH,    KC_DLR,     KC_PERC,    KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN,   KC_RPRN, _______,
-KC_TAB,  PREVTB,    WBAK,       WFWD,       NEXTTB,     KC_NDSH,    KC_MDSH, KC_UNDS, KC_PLUS, KC_LBRC,   KC_RBRC, KC_PIPE,
-KC_ENT,  HYPR(KC_Z),HYPR(KC_X), HYPR(KC_C), HYPR(KC_V), HYPR(KC_B), _______, KC_MINS, KC_EQL,  KC_LCBR,   KC_RCBR, _______,
-_______, _______,   _______,    _______,    _______,    _______,    _______, _______, OUTDENT, KC_PGDN,   KC_PGUP, INDENT
+KC_BSPC, ES_EXC,    ES_QUE,     EU_GBP,     EU_EURO,    KC_INF,     KC_SEC,     KM_BANG, SC_DEG,  L_GUIL,  R_GUIL,  _______,
+KC_TILD, KC_EXLM,   KC_AT,      KC_HASH,    KC_DLR,     KC_PERC,    KC_CIRC,    KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, _______,
+KC_TAB,  PREVTB,    WBAK,       WFWD,       NEXTTB,     KC_NDSH,    KC_MDSH,    KC_UNDS, KC_PLUS, KC_LBRC, KC_RBRC, KC_PIPE,
+KC_ENT,  HYPR(KC_Z),HYPR(KC_X), HYPR(KC_C), HYPR(KC_V), HYPR(KC_B), HYPR(KC_N), KC_MINS, KC_EQL,  KC_LCBR, KC_RCBR, _______,
+_______, _______,   _______,    _______,    _______,    _______,    _______,    _______, OUTDENT, KC_PGDN, KC_PGUP, INDENT
 ),
 
 /* Raise */
 [_RAISE] = LAYOUT_ortho_5x12(
-KC_BSPC, KC_F11,  KC_F12,  KC_F13,  KC_F14,  KC_F15,  KC_F16,  KC_F17,  KC_F18,  KC_F19,  KC_GRV, _______,
+KC_BSPC, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  _______,
 KC_GRV,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_DEL,
-KC_TAB,  _______, _______, _______, _______, _______, _______, KC_MINS, KC_EQL,  KC_LBRC, KC_RBRC, KC_BSLS,
+KC_TAB,  KC_WH_R, KC_WH_U, KC_WH_D, KC_WH_L, _______, _______, KC_MINS, KC_EQL,  KC_LBRC, KC_RBRC, KC_BSLS,
 KC_ENT,  _______, _______, _______, _______, _______, _______, _______, KC_NUBS, KC_LCBR, KC_RCBR, _______,
 _______, _______, _______, _______, _______, _______, _______, _______, PREVTB,  WBAK,    WFWD,    NEXTTB
 ),
 
 /* FUNCTIONs */
 [_LFN] = LAYOUT_ortho_5x12(       
-_______,       _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
-G(KC_TILD),    KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  WINCAD,
-G(S(KC_TILD)), KC_F11,  KC_F12,  KC_F13,  KC_F14,  KC_F15,  KC_F16,  KC_F17,  KC_F18,  KC_F19,  _______, _______,
-KC_ENT,        _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
-_______,       _______, _______, _______, _______, _______, _______, _______, KC_MRWD, KC_MUTE, KC_MPLY, KC_MFFD
+_______,       G(KC_F1),   G(KC_F2),  G(KC_F3),  G(KC_F4),  G(KC_F5),  G(KC_F6),  G(KC_F7),  G(KC_F8),  G(KC_F9),  G(KC_F10), _______,
+G(KC_TILD),    KC_F1,      KC_F2,     KC_F3,     KC_F4,     KC_F5,     KC_F6,     KC_F7,     KC_F8,     KC_F9,     KC_F10,    WINCAD,
+G(S(KC_TILD)), KC_F11,     KC_F12,    KC_F13,    KC_F14,    KC_F15,    KC_F16,    KC_F17,    KC_F18,    KC_F19,    _______,   _______,
+KC_ENT,        G(KC_F11),  G(KC_F12), G(KC_F13), G(KC_F14), G(KC_F15), G(KC_F16), G(KC_F17), G(KC_F18), G(KC_F19), _______,   _______,
+_______,       _______,    _______,   _______,   _______,   _______,   _______,   _______,   KC_MRWD,   KC_MUTE,   KC_MPLY,   KC_MFFD
 ),
 
 /* Adjust */
 [_ADJUST] = LAYOUT_ortho_5x12(
 RGB_TOG, RGB_MOD, RGB_HUI, RGB_SAI, RGB_VAI, _______, _______, _______, _______, _______, _______, _______,
 KC_SLEP, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
-_______, _______, _______, _______, _______, _______, _______, _______, ___x___, _______, _______, _______,
+_______, _______, _______, _______, _______, _______, _______, KC_BRID, KC_BRIU, _______, _______, _______,
 _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
-_______, _______, _______, _______, _______, _______, _______, _______, _______, KC_BRID, KC_BRIU, _______
+_______, _______, _______, _______, _______, _______, _______, _______, KC_MRWD, KC_MUTE, KC_MPLY, KC_MFFD
 )
 };
 
