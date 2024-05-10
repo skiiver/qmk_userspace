@@ -91,7 +91,6 @@ enum preonic_layers {
 #define PR_9 LCA_T(KC_9)
 #define PR_0 MT(MOD_LGUI | MOD_LCTL, KC_0)
 
-
 // Special Combos 
 #define WINCAD   C(A(KC_DEL))  // Control Alt Delete for Win Logins
 
